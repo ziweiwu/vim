@@ -28,19 +28,6 @@ set directory^=$HOME/.vim/swapfiles/
 set undodir=~/.vim/undodir
 set undofile
 
-if exists('+termguicolors')
-  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-  set termguicolors
-endif
-
-set background=dark
-"set background=light
-"color gruvbox
-"color dracula
-color material
-"color solarized8
-"color PaperColor
 
 inoremap <C-v> <ESC>"+pa
 inoremap <C-c> <ESC>"+y
@@ -73,7 +60,6 @@ let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-tbone'
 Plug 'w0rp/ale'
-Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'vim-python/python-syntax'
 Plug 'NLKNguyen/c-syntax.vim'
 Plug 'scrooloose/nerdtree'
@@ -83,12 +69,12 @@ Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'jiangmiao/auto-pairs'
 Plug 'mindriot101/vim-yapf'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'enricobacis/vim-airline-clock'
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
+"Plug 'enricobacis/vim-airline-clock'
 Plug 'rhysd/vim-clang-format'
 Plug 'davidhalter/jedi-vim'
-Plug 'Valloric/YouCompleteMe'
+"Plug 'Valloric/YouCompleteMe'
 Plug 'scrooloose/nerdtree'
 Plug 'fholgado/minibufexpl.vim'
 Plug 'junegunn/fzf'
@@ -96,12 +82,24 @@ Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdcommenter'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 Plug 'mileszs/ack.vim'
+Plug 'Chiel92/vim-autoformat'
+Plug 'google/vim-searchindex'
+Plug 'ajh17/VimCompletesMe'
+
+"themes
+Plug 'altercation/vim-colors-solarized'
 Plug 'morhetz/gruvbox'
 Plug 'kaicataldo/material.vim'
 Plug 'crusoexia/vim-monokai'
-Plug 'Chiel92/vim-autoformat'
-Plug 'google/vim-searchindex'
-
-
-"Plug 'ajh17/VimCompletesMe'
+Plug 'lifepillar/vim-solarized8'
 call plug#end()
+
+set termguicolors 
+set background=dark
+"set background=light
+"color gruvbox
+color dracula
+"color material
+"color solarized8
+"color PaperColor
+"color delek
