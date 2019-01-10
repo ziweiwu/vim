@@ -135,7 +135,13 @@ Plug 'crusoexia/vim-monokai'
 Plug 'lifepillar/vim-solarized8'
 call plug#end()
 
-set termguicolors 
+
+if $TERM_PROGRAM=='iTerm.app'
+  set termguicolors
+else 
+    set t_Co=256
+endif
+
 set background=dark
 "set background=light
 "color gruvbox
